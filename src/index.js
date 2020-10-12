@@ -405,11 +405,9 @@ export default function ReactNetflixPlayer({
   };
 
   const scrollToSelected = () => {
-    console.log(listReproduction)
     const element = listReproduction.current;
     if(element){
       const selected = element.getElementsByClassName('selected')[0];
-      console.log(selected)
       if(selected){
         const position = selected.offsetTop;
         const height = selected.offsetHeight;
@@ -743,7 +741,7 @@ export default function ReactNetflixPlayer({
                           >
                             <div className="bold">
                               <span style={{ marginRight: 15 }}>{index + 1}</span>
-                              {item.nome}
+                              {item.title}
                             </div>
 
                             {item.percent && <div className="percent" />}
