@@ -409,9 +409,12 @@ export default function ReactNetflixPlayer({
     const element = listReproduction.current;
     if(element){
       const selected = element.getElementsByClassName('selected')[0];
-      const position = selected.offsetTop;
-      const height = selected.offsetHeight;
-      element.scrollTop = position - height * 2;
+      console.log(selected)
+      if(selected){
+        const position = selected.offsetTop;
+        const height = selected.offsetHeight;
+        element.scrollTop = position - height * 2;
+      }
     }
   };
 
