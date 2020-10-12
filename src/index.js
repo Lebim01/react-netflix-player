@@ -36,8 +36,8 @@ import translations from './translations';
 
 i18n.use(initReactI18next).init({
   resources: translations,
-  lng: 'pt',
-  fallbackLng: 'pt',
+  lng: 'es',
+  fallbackLng: 'es',
 
   interpolation: {
     escapeValue: false,
