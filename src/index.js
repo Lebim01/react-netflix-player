@@ -469,7 +469,7 @@ export default function ReactNetflixPlayer({
       <StandyByInfo
         primaryColor={primaryColor}
         secundaryColor={secundaryColor}
-        show={showInfo === true && videoReady === true && playing === false}
+        show={videoReady === true && playing === false}
       >
         {(title || subTitle) && (
           <section className="center">
@@ -539,6 +539,7 @@ export default function ReactNetflixPlayer({
       fullPlayer={fullPlayer}
       hideVideo={!!error}
       fontFamily={fontFamily}
+      className="player"
     >
       {(videoReady === false || (waitingBuffer === true && playing === true)) && !error && !end && renderLoading()}
 
