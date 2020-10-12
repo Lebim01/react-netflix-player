@@ -406,10 +406,12 @@ export default function ReactNetflixPlayer({
 
   const scrollToSelected = () => {
     const element = listReproduction.current;
-    const selected = element.getElementsByClassName('selected')[0];
-    const position = selected.offsetTop;
-    const height = selected.offsetHeight;
-    element.scrollTop = position - height * 2;
+    if(element){
+      const selected = element.getElementsByClassName('selected')[0];
+      const position = selected.offsetTop;
+      const height = selected.offsetHeight;
+      element.scrollTop = position - height * 2;
+    }
   };
 
   const onChangePlayBackRate = speed => {
@@ -535,7 +537,6 @@ export default function ReactNetflixPlayer({
     <Container
       onMouseMove={hoverScreen}
       ref={playerElement}
-      onClick={play}
       onDoubleClick={chooseFullScreen}
       fullPlayer={fullPlayer}
       hideVideo={!!error}
