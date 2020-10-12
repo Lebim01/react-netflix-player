@@ -405,6 +405,7 @@ export default function ReactNetflixPlayer({
   };
 
   const scrollToSelected = () => {
+    console.log(listReproduction)
     const element = listReproduction.current;
     if(element){
       const selected = element.getElementsByClassName('selected')[0];
