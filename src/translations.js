@@ -23,6 +23,18 @@ const translations = {
       playError: 'Ocorreu um erro ao tentar reproduzir este vídeo -_-',
     },
   },
+  es: {
+    translation: {
+      youAreWatching: 'Estas viendo',
+      paused: 'Pausado',
+      tryAccessingOtherQuality: 'Intente cambiar la calidad de la imagen',
+      goBack: 'Volver',
+      speeds: 'Velocidades',
+      nextEpisode: 'Próximo Episodio',
+      playlist: 'Lista de Reproducción',
+      playError: 'Ha ocurrio un problema con este video',
+    },
+  },
 };
 
 export default translations;
