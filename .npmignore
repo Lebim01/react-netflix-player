@@ -1,2 +1,5 @@
+src
 demo
+src
 .babelrc
+webpack.config.js
