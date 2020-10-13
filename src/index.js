@@ -254,6 +254,13 @@ export default function ReactNetflixPlayer({
     setProgress(videoComponent.current.currentTime - seconds);
   };
 
+  const stopVideo = () => {
+    setDuration(0);
+    setVideoReady(false);
+    setStarted(false);
+    setPlaying(false);
+  }
+
   const startVideo = () => {
     try {
       setDuration(videoComponent.current.duration);
@@ -556,6 +563,7 @@ export default function ReactNetflixPlayer({
         ref={videoComponent}
         src={src}
         controls={false}
+        onLoadStart={() => stopVideo()}
         onCanPlay={() => startVideo()}
         onTimeUpdate={timeUpdate}
         onError={erroVideo}
