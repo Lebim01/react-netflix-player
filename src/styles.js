@@ -587,11 +587,12 @@ export const ItemNext = styled(ItemControllBar)`
 `;
 
 export const ItemListReproduction = styled(ItemControllBar)`
-  max-width: 400px;
+  width: 400px;
   overflow: hidden;
 
   & > div:first-child {
-    background: #333;
+    background: #282945;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -613,6 +614,7 @@ export const ItemListReproduction = styled(ItemControllBar)`
       flex-direction: column;
       max-height: 400px;
       overflow: auto;
+      position: relative;
 
       &::-webkit-scrollbar-track {
         background-color: #222;
@@ -627,17 +629,19 @@ export const ItemListReproduction = styled(ItemControllBar)`
       }
 
       .item-list-reproduction {
-        background: #222;
+        background: #181937;
+        border-radius: 5px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         font-size: 14px;
         padding: 10px;
         cursor: pointer;
         transition: all 0.2s ease-out;
-        align-items: center;
+        margin 5px 0px;
+        text-align: left;
 
         &:hover {
-          background: #333;
+          background: #d6ad6b;
         }
 
         .percent {
@@ -645,10 +649,51 @@ export const ItemListReproduction = styled(ItemControllBar)`
           width: 100px;
           margin-left: auto;
         }
+
+        .arrow {
+          position: absolute;
+          right: 5px;
+        }
+      }
+
+      .chap-description, .chap-title {
+        display: block;
+        text-align: left;
+        width: 100%;
+      }
+
+      .chap-title {
+        color: #d6ad6b;
+      }
+
+      .chap-description {
+        -webkit-line-clamp: 4;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        font-weight: normal;
+        opacity: 0.8;
+        margin-top: 10px;
+      }
+
+      .playlist-grid {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        margin-top: 10px;
+
+        img {
+          max-width: 100%;
+          border-radius: 10px;
+        }
       }
 
       .selected {
-        background: #333;
+        background: unset;
+        &:hover {
+          background: unset;
+        }
       }
     }
   }

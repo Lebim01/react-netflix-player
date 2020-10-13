@@ -13,7 +13,7 @@ ReactDOM.render(
       titleMedia="Dragon Ball Z"
       extraInfoMedia="Opening"
       // Text language of player
-      playerLanguage="pt"
+      playerLanguage="es"
       // Action when the button X (close) is clicked
       backButton={() => {}}
       // The player use the all viewport
@@ -27,14 +27,18 @@ ReactDOM.render(
       // The list reproduction data, will be render in this order
       reprodutionList={[
         {
-          nome: 'Opening',
+          title: 'Opening',
+          description: 'El término opening puede referirse a: Tema de apertura, la canción que se transmite durante la secuencia de apertura de una película, serie de televisión, etc. Opening, marca comercial utilizada por la empresa Open English Master Spain S.A.',
           id: 1,
           playing: true,
+          cover: 'https://uvm.cdn-capital.digital/img/2019/01/Cronolog%C3%ADa-completa-de-Dragon-Ball.jpg'
         },
         {
-          nome: 'Teste',
+          title: 'Teste',
+          description: 'El término opening puede referirse a: Tema de apertura, la canción que se transmite durante la secuencia de apertura de una película, serie de televisión, etc. Opening, marca comercial utilizada por la empresa Open English Master Spain S.A.',
           id: 2,
           playing: false,
+          cover: 'https://media.revistagq.com/photos/5f45010acb266484bb785c78/master/pass/dragon-ball-z.jpg'
         },
       ]}
       // The function call when a item in reproductionList is clicked

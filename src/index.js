@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import i18n from 'i18next';
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md';
 import { useTranslation, initReactI18next } from 'react-i18next';
 import {
   FaUndoAlt,
@@ -743,15 +744,27 @@ export default function ReactNetflixPlayer({
                         {reprodutionList.map((item, index) => (
                           <div
                             className={`item-list-reproduction ${item.playing && 'selected'}`}
-                            onClick={() =>
+                            onClick={() => {
+                              stopVideo()
                               onClickItemListReproduction && onClickItemListReproduction(item.id, item.playing)
-                            }
+                            }}
                           >
-                            <div className="bold">
-                              <span style={{ marginRight: 15 }}>{index + 1}</span>
-                              {item.title}
-                            </div>
-
+                            <span style={{ marginRight: 15 }}>
+                              Capitulo {index + 1}
+                            </span>
+                            {item.playing 
+                              ? <MdKeyboardArrowUp className="arrow" />
+                              : <MdKeyboardArrowDown className="arrow" />
+                            }
+                            {item.playing &&
+                              <div className="bold playlist-grid">
+                                <img alt="imagen" src={item.cover} />
+                                <div style={{display: 'flex', flexDirection:'column', padding: '0px 10px'}}>
+                                  <span className="chap-title">{item.title}</span>
+                                  <p className="chap-description">{item.description}</p>
+                                </div>
+                              </div>
+                            }
                             {item.percent && <div className="percent" />}
                           </div>
                         ))}
