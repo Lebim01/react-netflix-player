@@ -640,10 +640,6 @@ export const ItemListReproduction = styled(ItemControllBar)`
         margin 5px 0px;
         text-align: left;
 
-        &:hover {
-          background: #d6ad6b;
-        }
-
         .percent {
           height: 3px;
           width: 100px;
@@ -689,7 +685,7 @@ export const ItemListReproduction = styled(ItemControllBar)`
         }
       }
 
-      .selected {
+      .expanded {
         background: unset;
         &:hover {
           background: unset;
